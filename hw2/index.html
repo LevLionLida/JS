@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Title</title>
+</head>
+<body>
+
+<input type="number" id="celsius" name="celsius" placeholder="Celsius" oninput="adjustInputFields()">
+<button onclick="convertValue()">
+    <img id="arrowToLeft" src="icons8-arrow-pointing-left-48.png" alt="Convert" style="display: none; width: 24px; height: 24px;">
+    <img id="arrowToRight" src="icons8-arrow-48.png" alt="Convert" style="display: inline; width: 24px; height: 24px;">
+</button>
+
+
+<input type="text" id="fahrenheit" name="fahrenheit" placeholder="Fahrenheit" oninput="adjustInputFields()">
+
+
+
+
+<button onclick="clearFields()">Clear</button>
+
+<script src="hw.js"></script>
+</body>
+</html>
