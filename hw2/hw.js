@@ -29,13 +29,13 @@ function adjustInputFields() {
 }
 
 function convertValue() {
-    var celsius = document.getElementById('celsius').value.trim();
-    var fahrenheit = document.getElementById('fahrenheit').value.trim();
+    var celsius = +document.getElementById('celsius').value.trim();
+    var fahrenheit = +document.getElementById('fahrenheit').value.trim();
 
-    if (celsius !== "") {
+    if (celsius !==0 ) {
         var fahrenheitValue = (celsius * 9/5) + 32;
         document.getElementById('fahrenheit').value = fahrenheitValue.toFixed(2);
-    } else if (fahrenheit !== "") {
+    } else if (fahrenheit !== 0) {
         var celsiusValue = (fahrenheit - 32) * 5/9;
         document.getElementById('celsius').value = celsiusValue.toFixed(2);
     }
