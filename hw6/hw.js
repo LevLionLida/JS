@@ -2,11 +2,14 @@
 //
 // [false, 12, '23424', false, 324, '', true, null, 5, -0, 0, 9, undefined, NaN, 6.354, undefined, 7, null]
 // Вивести цей масив без нуль-значень (null, 0, false ....).
+const array = [false, 12, '23424', false, 324, '', true, null, 5, -0, 0, 9, undefined, NaN, 6.354, undefined, 7, null];
+const filteredArray = [];
 
-const arr = [false, 12, '23424', false, 324, '', true, null, 5, -0, 0, 9, undefined, NaN, 6.354, undefined, 7, null];
-const numbersOnly = arr.filter(element =>
-    typeof element === 'number' &&
-    !isNaN(element) &&
-    element !== 0);
+array.forEach(item => {
+    if (item !== false && item !== 0 && item !== -0 && item !== '' && item !== null && item !== undefined && !isNaN(item) || item === true) {
+        filteredArray.push(item);
+    }
+});
 
-console.log(numbersOnly);
+console.log(filteredArray);
+
