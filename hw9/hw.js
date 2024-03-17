@@ -1,12 +1,10 @@
-// Реалізуйте функцію removeElement(arr, elem, newElem),
-// яка шукає елементи elem в масиві arr та замінює їх на newElem.
 
+const user = {
+    name: prompt("Введіть ваше ім'я:"),
+    years: Number(prompt("Введіть ваш вік:")),
+    email: prompt("Введіть ваш емейл:")
+};
 
-function removeElement(arr, elem, newElem) {
-    return arr.map(item => item === elem ? newElem : item);
+for (const property in user) {
+    console.log(`${property}: ${user[property]}`);
 }
-
-const arr=[8,8,1,2,8,1,2 ,8 ];
-const newElemFunc=removeElement(arr, 8, 0);
-
-console.log(newElemFunc);
